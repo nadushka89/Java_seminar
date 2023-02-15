@@ -3,16 +3,16 @@
 public class task2Home {
     public static void main(String[] args) {
         int limit = 1000;
-        for (int number = 2; number <= limit; number++) { // number- делимое
-            for (int del = 2; del <= number; del++) { // del - делитель
-                int remaining = number % del; // remaining - остаток
-                if (remaining == 0) {
-                    break;
-                }
-                if (del == number - 1) {
-                    System.out.print(number + " ");
-                }
+        for (int i = 2; i <= limit; i++) { // i- делимое
+            int count = 0;
+            for (int j = 2; j <= i; j++) { // j - делитель
+                if (i % j == 0)
+                    count++;
             }
+            if (count == 1) {
+                System.out.printf("%d ", i);
+            }
+
         }
     }
 }
